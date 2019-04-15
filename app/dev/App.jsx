@@ -31,7 +31,7 @@ class App extends Component {
 	render() {
 		return (
 			<div className="site-wrapper">
-				<h1>Hello World</h1>
+				<h1>INDEX</h1>
 			</div>
 		);
 	}
