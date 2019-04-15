@@ -74,6 +74,6 @@
     "build": "webpack --config webpack.prod.js",
     "prepublish": "npm run build",
     "start": "webpack-dev-server --open --config webpack.common.js",
-    "deploy": "npm run build && git add . && git commit -m 'Auto Commit' && git subtree push --prefix build origin gh-pages"
+    "deploy": "git subtree push --prefix build origin gh-pages"
   }
 }
