@@ -1,0 +1,45 @@
+@import "./Normalize.scss";
+@import "./FlexGrid.scss";
+@import "./Config.scss";
+
+html {
+	font-family: $standard-font;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+html, body, #root {
+	height: 100%;
+}
+
+.deskbreak, .desk-break {
+	display: none;
+	@include for-desktop {
+		display: block;
+	}
+}
+
+@include for-desktop {
+	.mobbreak, .mob-break {
+		display: none;
+	}
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+*:focus {
+	outline: none;
+}
+
+.site-wrapper {
+	width: 100%;
+}
