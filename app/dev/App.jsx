@@ -6,7 +6,6 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Provider, connect } from 'react-redux';
 import withGracefulUnmount from 'react-graceful-unmount';
 import configureStore from 'Store/configureStore';
-
 // Actions
 import * as sessionActions from 'Actions/session';
 
@@ -39,6 +38,7 @@ class App extends Component {
 			val: false,
 		};
 	}
+	
 	componentDidMount() {
 		if(!this.state.val) {
 			console.log('here');

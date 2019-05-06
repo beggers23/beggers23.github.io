@@ -1,13 +1,15 @@
 import React from 'react';
 
+import Icon from 'Components/Icon/Icon.jsx';
+
 import './Sidebar.scss';
 
 function Sidebar() {
     return (
         <div className="sidebar">
-            <a href="#">IN</a>
-            <a href="#">FB</a>
-            <a href="#">GH</a>
+            <Icon name="linkedin" />
+            <Icon name="linkedin" />
+            <Icon name="linkedin" />
         </div>
     )
 };
