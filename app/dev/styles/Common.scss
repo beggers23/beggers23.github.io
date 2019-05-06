@@ -8,11 +8,9 @@ html {
 }
 
 *, *:before, *:after {
-	box-sizing: border-box;
-}
-
-body {
 	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html, body, #root {
@@ -41,5 +39,18 @@ button:hover {
 }
 
 .site-wrapper {
-	width: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	position: relative;
+	.container {
+		width: 80%;
+		min-height: 100vh;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include for-desktop {
+			width: 50%;
+		}
+	}
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Provider, connect } from 'react-redux';
 import withGracefulUnmount from 'react-graceful-unmount';
 import configureStore from 'Store/configureStore';
@@ -11,16 +11,22 @@ import configureStore from 'Store/configureStore';
 import * as sessionActions from 'Actions/session';
 
 // Templates
-import Index from 'Templates/control/Index.jsx';
+import Sidebar from 'Components/Sidebar/Sidebar.jsx';
+import Index from 'Templates/Index/Index.jsx';
+import About from 'Templates/About/About.jsx';
+import Experience from 'Templates/Experience/Experience.jsx';
+import Projects from 'Templates/Projects/Projects.jsx';
+
+import './styles/Common.scss';
 
 const store = configureStore();
 
 function Root() {
 	return (
 		<Provider store={store}>
-			<BrowserRouter>
-				<App />
-			</BrowserRouter>
+			<HashRouter>
+				<App />	
+			</HashRouter>
 		</Provider>
 	);
 }
@@ -42,8 +48,15 @@ class App extends Component {
 	render() {
 		return (
 			<div className="site-wrapper">
-				<h1>Hello World</h1>
-				<Index />
+				<Sidebar />
+				<div className="container">
+					<Switch>
+						<Route exact path="/about" component={About}/>
+						<Route exact path="/experience" component={Experience}/>
+						<Route exact path="/projects" component={Projects}/>
+						<Route exact path="/" component={Index} />
+					</Switch>
+				</div>
 			</div>
 		);
 	}

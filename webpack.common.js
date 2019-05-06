@@ -52,6 +52,8 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
+			react: "preact-compat",
+			"react-dom": "preact-compat",
 			Components: path.join(__dirname, './app/dev/_components'),
 			Split: path.join(__dirname, './app/dev/_split'),
 			Actions: path.join(__dirname, './app/dev/actions'),
