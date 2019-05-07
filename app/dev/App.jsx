@@ -10,7 +10,6 @@ import configureStore from 'Store/configureStore';
 import * as sessionActions from 'Actions/session';
 
 // Templates
-import Sidebar from 'Components/Sidebar/Sidebar.jsx';
 import Index from 'Templates/Index/Index.jsx';
 import About from 'Templates/About/About.jsx';
 import Experience from 'Templates/Experience/Experience.jsx';
@@ -34,6 +33,7 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 
+		console.log(props);
 		this.state = {
 			val: false,
 		};
@@ -48,7 +48,6 @@ class App extends Component {
 	render() {
 		return (
 			<div className="site-wrapper">
-				<Sidebar />
 				<div className="container">
 					<Switch>
 						<Route exact path="/about" component={About}/>
@@ -61,6 +60,7 @@ class App extends Component {
 		);
 	}
 }
+
 
 const mountNode = document.getElementById('root');
 

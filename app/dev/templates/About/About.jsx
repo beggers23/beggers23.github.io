@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
+
+import Header from 'Components/Header/Header.jsx';
+
+import './About.scss';
 
 function About() {
     return (
-        <div>
-            <h1>About</h1>
+        <div className="about-container">
+            <Header />
         </div>
     )
 };

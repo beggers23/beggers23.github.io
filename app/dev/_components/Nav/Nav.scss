@@ -1,0 +1,36 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    margin: 1rem 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    .underline {
+        position: relative;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: #0a0a0a;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 2px;
+            bottom: -5px;
+            left: -25%;
+            background-color: #363333;
+            visibility: hidden;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: all 0.5s ease-in-out 0s;
+            transition: all 0.5s ease-in-out 0s;
+        }
+        &:hover:after {
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+        }
+    }
+}
