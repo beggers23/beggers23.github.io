@@ -8,7 +8,7 @@ function Sidebar() {
     return (
         <div className="sidebar">
             <Icon name="linkedin" />
-            <Icon name="linkedin" />
+            <Icon name="github" />
             <Icon name="linkedin" />
         </div>
     )

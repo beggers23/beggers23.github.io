@@ -10,13 +10,13 @@ function Index() {
                 <h1 className="name">Brendan Eggers</h1>
             </div>
             <div className="nav">
-                <div className='underline'>
+                <div className="underline">
                     <Link to="/about">About</Link>
                 </div>
-                <div className='underline'>
+                <div className="underline">
                     <Link to="/experience">Experience</Link>
                 </div>
-                <div className='underline'>
+                <div className="underline">
                     <Link to="/projects">Projects</Link>
                 </div>
             </div>
