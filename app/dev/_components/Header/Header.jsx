@@ -6,7 +6,7 @@ import Social from 'Components/Social/Social.jsx';
 
 import './Header.scss';
 
-function Header() {
+function Header(props) {
     return (
         <div className="header-container">
             <div className="name">
@@ -15,7 +15,9 @@ function Header() {
                 </Link>
             </div>
             <div className="header-nav">
-                <Nav />
+                <Nav 
+                    active={props.active}
+                />
             </div>
             <div className="header-social">
                 <Social />

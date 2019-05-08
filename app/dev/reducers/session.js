@@ -1,10 +1,12 @@
 import {
 	UPDATE_PAGE_VAL,
+	UPDATE_COLOR_SCHEME,
 } from 'Actions/session.js';
 
 const initialState = {
 	newSession: true,
 	page: 'landing',
+	mode: '',
 }
 
 const sessionReducer = (state, action) => {
@@ -13,6 +15,12 @@ const sessionReducer = (state, action) => {
 			return {
 				...state,
 				page: action.page,
+			}
+		}
+		case UPDATE_COLOR_SCHEME: {
+			return {
+				...state,
+				mode: action.mode,
 			}
 		}
 		default:

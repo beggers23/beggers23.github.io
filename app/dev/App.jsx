@@ -15,6 +15,7 @@ import About from 'Templates/About/About.jsx';
 import Experience from 'Templates/Experience/Experience.jsx';
 import Projects from 'Templates/Projects/Projects.jsx';
 
+import Header from 'Components/Header/Header.jsx';
 import './styles/Common.scss';
 
 const store = configureStore();
@@ -23,7 +24,7 @@ function Root() {
 	return (
 		<Provider store={store}>
 			<HashRouter>
-				<App />	
+				<AppRouter />	
 			</HashRouter>
 		</Provider>
 	);
@@ -33,31 +34,52 @@ class App extends Component {
 	constructor(props) {
 		super(props);
 
-		console.log(props);
 		this.state = {
 			val: false,
 		};
+
+		this.toggleDarkMode = this.toggleDarkMode.bind(this);
 	}
 	
 	componentDidMount() {
-		if(!this.state.val) {
-			console.log('here');
+		const { session , location, history} = this.props;
+		if(session.page === 'landing') {
+			history.push('/');
+		} else {
+			history.push(`/${session.page}`);
 		}
+
+		if(this.props.session.mode === 'dark') {
+			document.body.classList.add('dark');
+		}
+	}
+	componentDidUpdate() {
+		const { location, session, dispatch } = this.props;
 	}
 
 	toggleDarkMode() {
-		const darkModeOn = document.body.classList.contains('dark');
+		const { dispatch, session } = this.props;
+		const darkModeOn = session.mode === 'dark';
+
 		if (darkModeOn) {
 			document.body.classList.remove('dark');
+			dispatch(sessionActions.updateColorScheme('light'));
 		} else {
 			document.body.classList.add('dark');
+			dispatch(sessionActions.updateColorScheme('dark'));
 		}
 	}
 
 	render() {
+		const { session } = this.props;
 		return (
 			<div className="site-wrapper">
 				<div className="container">
+					{(session.page !== 'landing') &&
+						<Header 
+							active={session.page}
+						/>
+					}
 					<Switch>
 						<Route exact path="/about" component={About}/>
 						<Route exact path="/experience" component={Experience}/>
@@ -65,11 +87,24 @@ class App extends Component {
 						<Route exact path="/" component={Index} />
 					</Switch>
 				</div>
-				<button className="toggleDark" onClick={this.toggleDarkMode}>Dark Mode</button>
+				<div 
+					className={`toggleDark ${session.mode === 'dark' ? 'dark' : ''}`}
+					onClick={this.toggleDarkMode}
+				>	
+					<div className="slider-wrap">
+						<div className="slider" />
+					</div>
+				</div>
 			</div>
 		);
 	}
 }
+
+function mapStateToProps(state) {
+	return { ...state };
+}
+
+const AppRouter = withRouter(connect(mapStateToProps)(App));
 
 
 const mountNode = document.getElementById('root');

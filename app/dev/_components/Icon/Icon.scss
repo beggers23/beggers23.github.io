@@ -14,8 +14,8 @@
     }
     &:hover {
         border-radius: 0%;
-        transform: rotate(405deg);
-        transition: border-radius .2s ease, transform .5s ease-out;
+        // transform: rotate(405deg);
+        transition: border-radius .2s ease;
         cursor: pointer;
     }
 }

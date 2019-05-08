@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
+import { connect } from 'react-redux';
 
-import Header from 'Components/Header/Header.jsx';
+import * as sessionActions from 'Actions/session.js';
 
 import './About.scss';
 
-function About() {
-    return (
-        <div className="about-container">
-            <Header />
-        </div>
-    )
+class About extends Component {
+    componentDidMount() {
+        const { dispatch } = this.props;
+
+        dispatch(sessionActions.updatePageVal('about'));
+    }
+    
+    render() {
+        return (
+            <div className="about-container">
+                <h1>About</h1>
+            </div>
+        );
+    }
 };
 
-export default About;
+function mapStateToProps(state) {
+    return { ...state };
+}
+
+export default withRouter(connect(mapStateToProps)(About));

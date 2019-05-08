@@ -9,28 +9,49 @@
     .underline {
         position: relative;
         text-align: center;
-        a {
-            text-decoration: none;
-            color: #0a0a0a;
+        &.inactive {
+            a {
+                text-decoration: none;
+                // color: #0a0a0a;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                width: 150%;
+                height: 2px;
+                bottom: -5px;
+                left: -25%;
+                background-color: #444;
+                visibility: hidden;
+                -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+                -webkit-transition: all 0.5s ease-in-out 0s;
+                transition: all 0.5s ease-in-out 0s;
+            }
+            &:hover:after {
+                visibility: visible;
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+            }
         }
-        &:after {
-            content: "";
-            position: absolute;
-            width: 150%;
-            height: 2px;
-            bottom: -5px;
-            left: -25%;
-            background-color: #333;
-            visibility: hidden;
-            -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-            -webkit-transition: all 0.5s ease-in-out 0s;
-            transition: all 0.5s ease-in-out 0s;
-        }
-        &:hover:after {
-            visibility: visible;
-            -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+        &.active {
+            a {
+                text-decoration: none;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                width: 150%;
+                height: 2px;
+                bottom: -5px;
+                left: -25%;
+                background-color: #444;
+                visibility: visible;
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+                -webkit-transition: all 0.5s ease-in-out 0s;
+                transition: all 0.5s ease-in-out 0s;
+            }
         }
     }
 }

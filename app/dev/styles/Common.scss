@@ -18,19 +18,22 @@ html, body, #root {
 }
 
 body {
+	transition: background .5s ease;
 	background: #fefefe;
 	h1, h2, h3, h4, h5, p, button, a:link, a:visited, a:hover, div, span, header {
-		color: #333;
-		border-color: #333;
+		transition: background .2s ease, color .2s ease, border-color .2s ease;
+		color: #444;
+		border-color: #444;
 		background: #fefefe;
 	}
 
 	&.dark {
-		background: #333;
+		// transition: background .5s ease;
+		background: #212121;
 		h1, h2, h3, h4, h5, p, button, a:link, a:visited, a:hover, div, span, header  {
 			color: #fefefe;
 			border-color: #fefefe;
-			background: #333;
+			background: #212121;
 		}
 	}
 }
@@ -60,6 +63,8 @@ button:hover {
 	min-width: 100%;
 	min-height: 100%;
 	position: relative;
+	// opacity: 0;
+	animation: fade-in .8s ease-in;
 	.container {
 		width: 80%;
 		min-height: 100vh;
@@ -73,7 +78,69 @@ button:hover {
 	}
 	.toggleDark {
 		position: fixed;
-		bottom: 0;
-		left: 0;
+		bottom: 2%;
+		left: 2%;
+		height: 40px;
+		width: 80px;
+		border-radius: 50px;
+		box-sizing:content-box;
+		cursor: pointer;
+		.slider-wrap {
+			// border: 2px solid red;
+			background: #eee;
+			width: 100%;
+			height: 100%;
+			border-radius: 50px;
+			position: relative;
+			.slider {
+				transition: all .5s ease;
+				width: 50%;
+				height: 100%;
+				background: #444 !important;
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				.moon {
+					display: block;
+				}
+				.sun {
+					display: none;
+				}
+			}
+		}
+		&.dark {
+			justify-content: flex-end;
+			.slider-wrap {
+				background: #333;
+				.slider {
+					left: 50%;
+					background: #fefefe !important;
+					.moon {
+						display: none;
+					}
+					.sun {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes slider {
+	0% {
+		
 	}
 }
