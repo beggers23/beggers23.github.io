@@ -18,9 +18,11 @@ html, body, #root {
 }
 
 body {
+	background: #fefefe;
 	h1, h2, h3, h4, h5, p, button, a:link, a:visited, a:hover, div, span, header {
-		color: #0a0a0a;
-		border-color: #0a0a0a;
+		color: #333;
+		border-color: #333;
+		background: #fefefe;
 	}
 
 	&.dark {
@@ -28,6 +30,7 @@ body {
 		h1, h2, h3, h4, h5, p, button, a:link, a:visited, a:hover, div, span, header  {
 			color: #fefefe;
 			border-color: #fefefe;
+			background: #333;
 		}
 	}
 }

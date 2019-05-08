@@ -1,0 +1,46 @@
+{
+    "experience": [{
+        "title": "Front End Web Developer",
+        "company": "Meredith Corp. | Synapse Group Inc.",
+        "location": "Stamford, CT",
+        "dates": "April 2017 - Present",
+        "description": "I worked here",
+        "technology": ""
+    }, {
+        "title": "Full Stack Web Developer",
+        "company": "General Assembly",
+        "location": "New York, NY",
+        "dates": "March 2016 - June 2016",
+        "description": "Full Stack Developer Bootcamp",
+        "technology": ""
+    }],
+    "projects": [{
+        "title": "Mags for Miles",
+        "technology": "React, Redux, REST APIs, Gulp, Pupeteer",
+        "link": "",
+        "description": "",
+        "image": "",
+        "type": "public"
+    }, {
+        "title": "Magazine Discount Center",
+        "technology": "Angular",
+        "link": "",
+        "description": "",
+        "image": "",
+        "type": "public"
+    }, {
+        "title": "Bizrate Magazine Offer",
+        "technology": "React",
+        "link": "",
+        "description": "",
+        "image": "",
+        "type": "private"
+    }, {
+        "title": "Stopwatch",
+        "technology": "Vue",
+        "link": "",
+        "description": "",
+        "image": "",
+        "type": "public"
+    }]
+}
