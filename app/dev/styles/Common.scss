@@ -17,6 +17,21 @@ html, body, #root {
 	height: 100%;
 }
 
+body {
+	h1, h2, h3, h4, h5, p, button, a:link, a:visited, a:hover, div, span, header {
+		color: #0a0a0a;
+		border-color: #0a0a0a;
+	}
+
+	&.dark {
+		background: #333;
+		h1, h2, h3, h4, h5, p, button, a:link, a:visited, a:hover, div, span, header  {
+			color: #fefefe;
+			border-color: #fefefe;
+		}
+	}
+}
+
 .deskbreak, .desk-break {
 	display: none;
 	@include for-desktop {
@@ -52,5 +67,10 @@ button:hover {
 		@include for-desktop {
 			width: 50%;
 		}
+	}
+	.toggleDark {
+		position: fixed;
+		bottom: 0;
+		left: 0;
 	}
 }

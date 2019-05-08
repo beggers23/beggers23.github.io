@@ -45,6 +45,15 @@ class App extends Component {
 		}
 	}
 
+	toggleDarkMode() {
+		const darkModeOn = document.body.classList.contains('dark');
+		if (darkModeOn) {
+			document.body.classList.remove('dark');
+		} else {
+			document.body.classList.add('dark');
+		}
+	}
+
 	render() {
 		return (
 			<div className="site-wrapper">
@@ -56,6 +65,7 @@ class App extends Component {
 						<Route exact path="/" component={Index} />
 					</Switch>
 				</div>
+				<button className="toggleDark" onClick={this.toggleDarkMode}>Dark Mode</button>
 			</div>
 		);
 	}
