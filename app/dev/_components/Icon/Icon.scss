@@ -1,21 +1,26 @@
-.icon {
-    font-size: 2rem;
+.social-icon {
+    font-size: 1.8rem;
     border: 1px solid black;
     transform: rotate(45deg);
-    transition: border-radius .2s ease, transform .5s ease-out;
-    height: 60px;
-    width: 60px;
+    // transition: border-radius .5s ease;
+    height: 50px;
+    width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
     border-radius: 50%;
     i {
         transform: rotate(-45deg);
     }
     &:hover {
-        border-radius: 0%;
-        // transform: rotate(405deg);
-        transition: border-radius .2s ease;
         cursor: pointer;
+        animation: wavy 2.5s linear infinite;
+    }
+
+    @keyframes wavy {
+        0% { border-radius: 50%; }
+        50% { border-radius: 0% } 
+        100% { border-radius: 50% }
     }
 }

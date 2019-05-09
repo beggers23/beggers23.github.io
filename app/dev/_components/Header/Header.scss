@@ -12,6 +12,51 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    #hamburger {
+        position: absolute;
+        top: 25px;
+        right: 5%;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .bars {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            margin: 3px 0;
+            display: flex;
+            .bar {
+                position: absolute;
+                height: 5px;
+                width: 100%;
+                background: #444;
+                transition: all .2s ease-in-out;
+                &.top {
+                    top: 25%;
+                }
+                &.bottom {
+                    bottom: 25%;
+                }
+            }
+
+            &.true {
+                .bar {
+                    &.top {
+                        transform: rotate(45deg);
+                        top: 12.5px;
+                    }
+                    &.bottom {
+                        transform: rotate(-45deg);
+                        bottom: 12.5px;
+                    }
+                }
+            }
+        }
+    }
     .name {
         width: 100%;
         a {
@@ -23,38 +68,63 @@
             text-decoration: none;
             position: relative;
             color: #0a0a0a;
+            margin: .5rem 0;
             h1 {
                 font-size: 2rem;
             }
         }
     }
-    .header-nav, .header-social {
+    .links-wrapper {
         width: 100%;
-        display: flex;
-        // justify-content: space-around;
-        align-items: center;
-        .nav {
-            border: none;
-            width: 100%;
-        }
-        display: none;
-    }
-
-    @include for-desktop {
-        justify-content: space-around;
-        flex-direction: row;
-        padding: 0;
-        .name {
-            width: 50%;
-        }
         .header-nav, .header-social {
-            width: 50%;
+            width: 100%;
             display: flex;
             // justify-content: space-around;
             align-items: center;
             .nav {
                 border: none;
                 width: 100%;
+            }
+        }
+        max-height: 300px;
+        overflow-y: hidden;
+        transition: all .75s ease-out;
+        &.hidden {
+            max-height: 0;
+        }
+    }
+    @include for-desktop {
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 0;
+        .name {
+            width: 30%;
+        }
+        #hamburger {
+            display: none;
+        }
+        .links-wrapper {
+            width: 70%;
+            display: flex;
+            .header-nav, .header-social {
+                width: 50%;
+                display: flex;
+                // justify-content: space-around;
+                align-items: center;
+                .nav {
+                    border: none;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.dark {
+    #hamburger {
+        .bars {
+            .bar {
+                background: #fefefe;
             }
         }
     }

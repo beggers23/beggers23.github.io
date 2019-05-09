@@ -1,5 +1,5 @@
 {
-  "name": "Brendan Eggers Portfolio",
+  "name": "beggers23.github.io.git",
   "version": "1.1.15",
   "description": "This is a React single-page-application that can be used as a boilerplate for all standalone sites",
   "author": "Brendan Eggers",
@@ -16,6 +16,7 @@
     "preact-compat": "^3.18.5",
     "prop-types": "^15.6.1",
     "react": "^16.6.3",
+    "react-device-detect": "^1.6.2",
     "react-dom": "^16.2.0",
     "react-ga": "^2.4.1",
     "react-graceful-unmount": "^1.0.7",

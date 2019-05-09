@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
+import { isIE } from 'react-device-detect';
 import { withRouter } from 'react-router';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Provider, connect } from 'react-redux';
-import withGracefulUnmount from 'react-graceful-unmount';
 import configureStore from 'Store/configureStore';
 // Actions
 import * as sessionActions from 'Actions/session';
@@ -72,6 +71,7 @@ class App extends Component {
 
 	render() {
 		const { session } = this.props;
+		if(isIE) return <div className="container">My site. My rules. No IE. Download a better browser.</div>
 		return (
 			<div className="site-wrapper">
 				<div className="container">

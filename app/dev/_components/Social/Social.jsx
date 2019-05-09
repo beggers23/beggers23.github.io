@@ -1,4 +1,5 @@
 import React from 'react';
+import { isMobile } from 'react-device-detect';
 
 import Icon from 'Components/Icon/Icon.jsx';
 
@@ -7,11 +8,13 @@ import './Social.scss';
 function Social() {
     return (
         <div className="social">
-            <Icon name="mobile-alt" base="fas" />
-            <Icon name="linkedin" base="fab" />
-            <Icon name="file-pdf" base="fas" />
-            <Icon name="github" base="fab" />
-            <Icon name="envelope" base="fas" />
+            { (isMobile) &&
+                <Icon name="mobile-alt" base="fas" type="social" />
+            }
+            <Icon name="linkedin" base="fab" type="social" />
+            <Icon name="file-pdf" base="fas" type="social" />
+            <Icon name="github" base="fab" type="social" />
+            <Icon name="envelope" base="fas" type="social" />
         </div>
     )
 };
