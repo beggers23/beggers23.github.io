@@ -19,21 +19,20 @@ html, body, #root {
 
 body {
 	transition: background .5s ease;
-	background: #fefefe;
+	background: $main-white;
 	h1, h2, h3, h4, h5, p, button, a:link, a:visited, a:hover, div, span, header {
-		transition: background .2s ease, color .2s ease, border-color .2s ease;
-		color: #444;
-		border-color: #444;
-		background: #fefefe;
+		transition: background .5s ease, color .5s ease, border-color .5s ease;
+		color: $main-black;
+		border-color: $main-black;
+		background: $main-white;
 	}
 
 	&.dark {
-		// transition: background .5s ease;
-		background: #212121;
+		background: $main-black;
 		h1, h2, h3, h4, h5, p, button, a:link, a:visited, a:hover, div, span, header  {
-			color: #fefefe;
-			border-color: #fefefe;
-			background: #212121;
+			color: $main-white;
+			border-color: $main-white;
+			background: $main-black;
 		}
 	}
 }
@@ -63,7 +62,6 @@ button:hover {
 	min-width: 100%;
 	min-height: 100%;
 	position: relative;
-	// opacity: 0;
 	animation: fade-in .8s ease-in;
 	.container {
 		width: 90%;
@@ -72,6 +70,7 @@ button:hover {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		position: relative;
 		@include for-desktop {
 			width: 50%;
 		}
@@ -86,8 +85,7 @@ button:hover {
 		box-sizing:content-box;
 		cursor: pointer;
 		.slider-wrap {
-			// border: 2px solid red;
-			background: #eee;
+			background: #fefefe;
 			width: 100%;
 			height: 100%;
 			border-radius: 50px;
@@ -115,12 +113,6 @@ button:hover {
 				.slider {
 					left: 50%;
 					background: #fefefe !important;
-					.moon {
-						display: none;
-					}
-					.sun {
-						display: block;
-					}
 				}
 			}
 		}
@@ -136,11 +128,5 @@ button:hover {
 	}
 	100% {
 		opacity: 1;
-	}
-}
-
-@keyframes slider {
-	0% {
-		
 	}
 }

@@ -71,7 +71,7 @@ class App extends Component {
 
 	render() {
 		const { session } = this.props;
-		if(isIE) return <div className="container">My site. My rules. No IE. Download a better browser.</div>
+		if(isIE) return <div className="container">My site. My rules. No IE. Get a better browser.</div>
 		return (
 			<div className="site-wrapper">
 				<div className="container">

@@ -3,9 +3,21 @@ import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 
 import * as sessionActions from 'Actions/session.js';
+const data = require('Utilities/data.json');
+
+import Job from 'Components/Job/Job.jsx';
 
 import './Experience.scss';
 class Experience extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            experience: data.experience,
+        }
+
+    }
+
     componentDidMount() {
         const { dispatch } = this.props;
 
@@ -13,9 +25,12 @@ class Experience extends Component {
     }
     
     render() {
+        const { experience } = this.state;
         return (
-            <div>
-                <h1>Experience</h1>
+            <div className="experience-wrapper">
+                {experience.map((job) => {
+                    return <Job info={job} />
+                })}
             </div>
         )
     }

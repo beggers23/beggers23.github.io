@@ -7,6 +7,13 @@
         "description": "I worked here",
         "technology": ""
     }, {
+        "title": "Head Swim Coach",
+        "company": "Various Pools",
+        "location": "Westchester County, NY",
+        "dates": "June 2016 - April 2017",
+        "description": "I spent this time coaching swimming, my previous career path, while I continued to learn Front End Development skills.",
+        "technology": "Learned Vue.js and honed my skills in Javascript by working through Free Code Camp and Code Academy courses."
+    }, {
         "title": "Full Stack Web Developer",
         "company": "General Assembly",
         "location": "New York, NY",
@@ -16,31 +23,35 @@
     }],
     "projects": [{
         "title": "Mags for Miles",
-        "technology": "React, Redux, REST APIs, Gulp, Pupeteer",
-        "link": "",
-        "description": "",
+        "technology": "React, Redux, REST APIs, Gulp, Webpack, Pupeteer",
+        "link": "https://magsformiles.com",
+        "description": "This homepage directs users to the direct mail and email campaigns for a program where users can use excess airline or hotel miles/points to subscribe to magazines. Choose a client to see the offer built on a separate React Application that manages the ecommerce logic for the magazine offers.",
+        "trafficDetails": "",
         "image": "",
         "type": "public"
     }, {
         "title": "Magazine Discount Center",
         "technology": "Angular",
-        "link": "",
-        "description": "",
+        "link": "https://magazinediscountcenter.com",
+        "description": "E-Commerce platform for purchasing individual magazines. Built on Angular frontend and Java backend.",
         "image": "",
+        "trafficDetails": "",
         "type": "public"
     }, {
         "title": "Bizrate Magazine Offer",
         "technology": "React",
         "link": "",
-        "description": "",
+        "description": "Private and gated offer to sell magazines at a low price for the first term of issues. Payments can be processed through an internal API using Credit Cards or Paypal, powered by the Braintree API. I personally have spent the majority of my 2 year career at Synapse helping build, optimize, and maintain this application. It is the most stable and profitable part of the Synapse business.",
         "image": "",
+        "trafficDetails": "",
         "type": "private"
     }, {
         "title": "Stopwatch",
         "technology": "Vue",
-        "link": "",
-        "description": "",
+        "link": "https://beggers23.github.io/timer/",
+        "description": "Small personal project I made in 2016 to aid my swim coaching career.",
         "image": "",
+        "trafficDetails": "none",
         "type": "public"
     }]
 }
