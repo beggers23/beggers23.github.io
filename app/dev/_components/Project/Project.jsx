@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import './Project.scss';
-
-
 class Project extends Component {
 	constructor(props) {
 		super(props);

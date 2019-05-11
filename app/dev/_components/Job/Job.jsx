@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
+
 import './Job.scss';
 
 import Icon from 'Components/Icon/Icon.jsx';
