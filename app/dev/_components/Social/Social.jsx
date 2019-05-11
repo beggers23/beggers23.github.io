@@ -1,5 +1,6 @@
 import React from 'react';
 import { isMobile } from 'react-device-detect';
+import BrendanEggersResume from '../../static/pdf/BrendanEggersResume.pdf'
 
 import Icon from 'Components/Icon/Icon.jsx';
 
@@ -13,16 +14,16 @@ function Social() {
                     <Icon name="mobile-alt" base="fas" type="social" />
                 </a>
             }
-            <a href="https://www.linkedin.com/in/brendaneggers/" target="_blank">
-                <Icon link="" name="linkedin" base="fab" type="social" />
+            <a href="https://www.linkedin.com/in/brendaneggers/" target="_blank" rel="noopener noreferrer">
+                <Icon name="linkedin" base="fab" type="social" />
             </a>
-            {/* <a href="../../utilities/BrendanEggersResume.pdf"> */}
+            <a href={BrendanEggersResume} target="_blank" rel="noopener noreferrer">
                 <Icon name="file-pdf" base="fas" type="social" />
-            {/* </a> */}
-            <a href="https://github.com/beggers23" target="_blank">
+            </a>
+            <a href="https://github.com/beggers23" target="_blank" rel="noopener noreferrer">
                 <Icon name="github" base="fab" type="social" />
             </a>
-            <a href="mailto:brendan@eggers.dev">
+            <a href="mailto:eggers.brendan@gmail.com">
                 <Icon name="envelope" base="fas" type="social" />
             </a>
         </div>

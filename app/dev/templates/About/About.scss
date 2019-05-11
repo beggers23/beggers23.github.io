@@ -5,8 +5,10 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    background: transparent;
     .me-header {
-        font-size: 1.5rem;
+        background: transparent;
+        font-size: 2rem;
         margin-bottom: 1rem;
     }
 }

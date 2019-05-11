@@ -18,21 +18,21 @@ html, body, #root {
 }
 
 body {
-	transition: background .5s ease;
+	transition: all .5s ease;
 	background: $white;
-	h1, h2, h3, h4, h5, p, button, a:link, a:visited, a:hover, div, span, header {
-		transition: background .5s ease, color .5s ease, border-color .5s ease;
+	border-color: $black;
+	color: $black;
+	a:link, a:visited {
 		color: $black;
-		border-color: $black;
-		background: $white;
 	}
 
 	&.dark {
+		// transition: background .5s ease, color .5 ease, border-color .5s ease;
 		background: $black;
-		h1, h2, h3, h4, h5, p, button, a:link, a:visited, a:hover, div, span, header  {
+		color: $white;
+		border-color: $white;
+		a:link, a:visited  {
 			color: $white;
-			border-color: $white;
-			background: $black;
 		}
 	}
 }

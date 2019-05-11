@@ -28,7 +28,7 @@ class Experience extends Component {
         const { experience } = this.state;
         return (
             <div className="exp-wrapper">
-                <h1 className="exp-header">Work Stuff</h1>
+                <h1 className="exp-header">Place this guy worked</h1>
                 <div className="jobs-wrapper">
                     {experience.map((job) => {
                         return <Job key={job.key} info={job} />

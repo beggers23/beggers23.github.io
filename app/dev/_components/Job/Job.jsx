@@ -30,7 +30,7 @@ class Job extends Component {
 						<h1 className="title">{info.title}</h1>
 						<p className="location">
 							{(info.link) ? (
-								<a href={info.link} rel="noreferrer noopener" target="_blank">
+								<a href={info.link} rel="noreferrer noopener" target="_blank" rel="noopener noreferrer">
 									{info.company}
 								</a>
 							) : (

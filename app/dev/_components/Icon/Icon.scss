@@ -35,6 +35,16 @@
     }
 }
 
+.about-icon {
+    font-size: 1.8rem;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
 .dark {
     .social-icon {
         border: 1px solid $orange;

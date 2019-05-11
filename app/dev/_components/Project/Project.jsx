@@ -32,7 +32,7 @@ class Project extends Component {
 					<div className="proj-details">
 						<h1>
 							{info.link !== '' ? (
-								<a href={info.link}>{info.title}</a>
+								<a href={info.link} target="_blank" rel="noopener noreferrer">{info.title}</a>
 							) : (
 								<span>{info.title}</span>
 							)}

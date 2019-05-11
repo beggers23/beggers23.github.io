@@ -11,11 +11,21 @@ class Header extends Component {
     constructor(props) {
         super(props);
 
+        const smallWindow = isMobile || (window.innerWidth < 900);
+
         this.state = {
-            showMenu: !isMobile,
+            showMenu: !smallWindow,
+            active: props.active,
         }
 
         this.toggleMenu = this.toggleMenu.bind(this);
+    }
+    componentWillReceiveProps(nextProps) {
+        if((nextProps.active !== this.state.active) && isMobile) {
+            this.setState({
+                showMenu: false,
+            })
+        }
     }
 
     toggleMenu() {
@@ -23,6 +33,7 @@ class Header extends Component {
             showMenu: !this.state.showMenu,
         });
     }
+
     render() {
         const { active, page } = this.props;
         const { showMenu } = this.state;

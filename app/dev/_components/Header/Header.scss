@@ -7,12 +7,12 @@
     padding: 1rem 0;
     width: 100%;
     display: flex;
-    border-bottom: 1px solid $black;
     box-shadow: 0 4px 2px -2px $grey;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 1;
+    background: $white;
     #hamburger {
         position: absolute;
         top: 10px;
@@ -71,6 +71,7 @@
             color: $black;
             margin: .5rem 0;
             h1 {
+                transition: color .2s ease;
                 font-size: 2rem;
             }
         }
@@ -135,7 +136,8 @@
         }
     }
     .header-container {
-         .name {
+        background: $black;
+        .name {
             &:hover {
                 a {
                     h1 {

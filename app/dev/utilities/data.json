@@ -1,6 +1,61 @@
 {
     "about": [{
-
+        "headline": "Work Ethic",
+        "images": [
+            {
+                "base": "fab",
+                "name": "react",
+                "desc": "Ability to manage multiple responsibilities simultaneously"
+            },
+            {
+                "base": "fas",
+                "name": "code-branch",
+                "desc": "A team-player and leader demonstrating a high-level of accuracy and thoroughness"
+            },
+            {
+                "base": "fas",
+                "name": "coffee",
+                "desc": "Fast learner that effectively resolves issues and consistently exceeds established goals"
+            }
+        ]
+    }, {
+        "headline": "Personal Life",
+        "images": [
+            {
+                "base": "fab",
+                "name": "untappd",
+                "desc": "Craft beer enthusiest. Always trying to find the next best brew"
+            },
+            {
+                "base": "fas",
+                "name": "golf-ball",
+                "desc": "Exercise junkie playing a variety of sports including golf, softball, and boxing"
+            },
+            {
+                "base": "fas",
+                "name": "kiwi-bird",
+                "desc": "Travel junkie amped for the next big adventure. Recently returned from 2 week trip to New Zealand"
+            }
+        ]
+    }, {
+        "headline": "Entertainment Interests",
+        "images": [
+            {
+                "base": "fas",
+                "name": "basketball-ball",
+                "desc": "Huge Knicks and NBA fan. Moderater of /r/nyknicks. Attends the NBA Draft annually"
+            },
+            {
+                "base": "fas",
+                "name": "swimmer",
+                "desc": "Former NCAA Division III Swimmer. A professional coach for almost 10 years"
+            },
+            {
+                "base": "fas",
+                "name": "frog",
+                "desc": "Super nerdy as well. Avid GoT, Star Wars, MCU fan. In my first DnD campign with my magic buddies"
+            }
+        ]
     }],
     "experience": [{
         "key": "Synapse",

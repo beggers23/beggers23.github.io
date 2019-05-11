@@ -4,9 +4,20 @@ import { connect } from 'react-redux';
 
 import * as sessionActions from 'Actions/session.js';
 
+const data = require('Utilities/data.json');
+
+import Details from 'Components/Details/Details.jsx';
+
 import './About.scss';
 
 class About extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            details: data.about,
+        }
+    }
     componentDidMount() {
         const { dispatch } = this.props;
 
@@ -14,11 +25,14 @@ class About extends Component {
     }
     
     render() {
+        const { details } = this.state;
         return (
             <div className="about-wrapper">
-                <h1 className="me-header">Me Stuff</h1>
+                <h1 className="me-header">About this guy</h1>
                 <div className="me-wrapper">
-
+                    {details.map((info) => {
+                        return <Details key={info.headline} info={info} />
+                    })}
                 </div>
             </div>
         );

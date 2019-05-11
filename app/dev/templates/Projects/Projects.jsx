@@ -26,7 +26,7 @@ class Projects extends Component {
         const { projects } = this.state;
         return (
             <div className="projects-container">
-                <h1 className="proj-header">Coded Stuff</h1>
+                <h1 className="proj-header">Sites this guy coded</h1>
                 <div className="proj-wrapper">
                     {projects.map((proj) => {
                         return <Project key={proj.key} info={proj} />
