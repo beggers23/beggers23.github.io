@@ -37,6 +37,7 @@ class App extends Component {
 			val: false,
 		};
 
+		
 		this.toggleDarkMode = this.toggleDarkMode.bind(this);
 	}
 	
