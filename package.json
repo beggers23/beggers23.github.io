@@ -74,10 +74,7 @@
     "install": "npm run install-webpack-dev-server",
     "install-webpack-dev-server": "npm install -g webpack webpack-dev-server",
     "prebuild": "gulp clean",
-    "build": "webpack NODE_ENV=production --config webpack.prod.js",
-    "prepublish": "npm run build",
-    "publish": "gulp publish",
-    "push": "npm run publish && gulp sync",
+    "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --open --config webpack.common.js"
   }
 }
