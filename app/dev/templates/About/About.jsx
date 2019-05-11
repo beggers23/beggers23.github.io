@@ -28,7 +28,7 @@ class About extends Component {
         const { details } = this.state;
         return (
             <div className="about-wrapper">
-                <h1 className="me-header">About this guy</h1>
+                <h1 className="me-header">Stuff about this guy</h1>
                 <div className="me-wrapper">
                     {details.map((info) => {
                         return <Details key={info.headline} info={info} />
