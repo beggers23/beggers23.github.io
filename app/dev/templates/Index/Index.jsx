@@ -16,6 +16,7 @@ class Index extends Component {
         ReactGA.ga('send', 'pageview', { page: 'landing', title: 'landing' });
         dispatch(sessionActions.updatePageVal('landing'));
     }
+    
     render() {
         return (
             <div className="index-wrapper">

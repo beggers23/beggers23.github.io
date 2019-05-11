@@ -67,7 +67,13 @@ class App extends Component {
 
 	toggleDarkMode() {
 		const { dispatch, session } = this.props;
-		const darkModeOn = session.mode === 'dark';
+		const darkModeOn = (session.mode === 'dark');
+
+		ReactGA.event({
+			category: 'Click',
+			action: 'Dark Mode',
+			label: `Turning ${darkModeOn ? 'Off' : 'On'}`
+		});
 
 		if (darkModeOn) {
 			document.body.classList.remove('dark');

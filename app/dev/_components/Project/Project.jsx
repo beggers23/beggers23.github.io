@@ -14,8 +14,16 @@ class Project extends Component {
 	}
 
 	toggleOverlay() {
+		const { overlay } = this.state;
+		
+		ReactGA.event({
+			category: 'Click',
+			action: 'Project Overlay',
+			label: `Turning ${overlay ? 'Off' : 'On'}`
+		});
+
 		this.setState({
-			overlay: !this.state.overlay,
+			overlay: !overlay,
 		});
 	}
 
