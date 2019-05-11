@@ -9,7 +9,7 @@ const path = require('path');
 const PATH = 'eggers.dev';
 
 // const S3 = awspublish.create(AWS_SECRET);
-const APP = path.join(__dirname, './app/build/*');
+const APP = path.join(__dirname, './build/*');
 
 gulp.task('publish', () => {
 	return (
