@@ -129,5 +129,14 @@
         "trafficDetails": "No one goes here",
         "type": "public",
         "description": "Small personal project I made in 2016 to aid my swim coaching career."
+    }, {
+        "key": "Snake",
+        "title": "Snake",
+        "technology": "jQuery, CSS",
+        "link": "http://beggers23.github.io/SnakeGame/",
+        "image": "https://raw.githubusercontent.com/beggers23/SnakeGame/master/Images/StartScreen.png",
+        "trafficDetails": "No one goes here",
+        "type": "public",
+        "description": "First project I ever made. Snake using only jQuery and CSS"
     }]
 }
