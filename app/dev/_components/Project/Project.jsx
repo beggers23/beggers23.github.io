@@ -31,11 +31,15 @@ class Project extends Component {
 				<div className={`overlay ${overlay}`}>
 					<div className="proj-details">
 						<h1>
-							<a href={info.link}>{info.title}</a>
+							{info.link !== '' ? (
+								<a href={info.link}>{info.title}</a>
+							) : (
+								<span>{info.title}</span>
+							)}
 						</h1>
+						<p>{info.trafficDetails}</p>
 						<p>{info.description}</p>
 						<p>{info.technology}</p>
-						<p>{info.trafficDetails}</p>
 					</div>
 				</div>
 			</div>

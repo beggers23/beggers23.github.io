@@ -16,7 +16,9 @@ function Social() {
             <a href="https://www.linkedin.com/in/brendaneggers/" target="_blank">
                 <Icon link="" name="linkedin" base="fab" type="social" />
             </a>
-            <Icon name="file-pdf" base="fas" type="social" />
+            {/* <a href="../../utilities/BrendanEggersResume.pdf"> */}
+                <Icon name="file-pdf" base="fas" type="social" />
+            {/* </a> */}
             <a href="https://github.com/beggers23" target="_blank">
                 <Icon name="github" base="fab" type="social" />
             </a>

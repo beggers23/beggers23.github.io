@@ -42,7 +42,7 @@
         "key": "BRI",
         "title": "Bizrate Offer Application",
         "technology": "React, Redux, REST APIs, Gulp, Webpack",
-        "link": "#/projects",
+        "link": "",
         "image": "https://i.imgur.com/Ll8hKmp.jpg",
         "trafficDetails": "Over 14 million sessions last year",
         "type": "private",
@@ -64,14 +64,14 @@
         "image": "https://i.imgur.com/vrB0T3c.jpg",
         "trafficDetails": "Over 2 million sessions in the last year",
         "type": "public",
-        "description": "E-Commerce platform for purchasing individual magazines. Built on Angular frontend and Java backend."
+        "description": "E-Commerce platform for purchasing individual magazines. "
     }, {
         "key": "Watch",
         "title": "Stopwatch",
         "technology": "Vue.js",
         "link": "https://beggers23.github.io/timer/",
         "image": "https://i.imgur.com/4Dn8U2C.png",
-        "trafficDetails": "No traffic. Personal Site.",
+        "trafficDetails": "No one goes here",
         "type": "public",
         "description": "Small personal project I made in 2016 to aid my swim coaching career."
     }]
