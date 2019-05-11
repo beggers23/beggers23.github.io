@@ -13,8 +13,11 @@ class Projects extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Projects</h1>
+            <div className="projects-wrapper">
+                <h1 className="proj-header">Coded Stuff</h1>
+                <div className="proj-wrapper">
+                
+                </div>
             </div>
         )
     }

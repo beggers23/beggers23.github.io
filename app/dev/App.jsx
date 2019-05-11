@@ -42,6 +42,8 @@ class App extends Component {
 	
 	componentDidMount() {
 		const { session , location, history} = this.props;
+		window.scrollTo(0, 0);
+
 		if(session.page === 'landing') {
 			history.push('/');
 		} else {
@@ -74,7 +76,7 @@ class App extends Component {
 		if(isIE) return <div className="container">My site. My rules. No IE. Get a better browser.</div>
 		return (
 			<div className="site-wrapper">
-				<div className="container">
+				<div className={`container ${session.page}`}>
 					{(session.page !== 'landing') &&
 						<Header 
 							active={session.page}

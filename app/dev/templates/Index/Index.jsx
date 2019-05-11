@@ -6,6 +6,7 @@ import * as sessionActions from 'Actions/session.js';
 
 import Social from 'Components/Social/Social.jsx';
 import Nav from 'Components/Nav/Nav.jsx';
+import Header from 'Components/Header/Header.jsx';
 
 import './Index.scss';
 

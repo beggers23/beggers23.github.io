@@ -15,8 +15,11 @@ class About extends Component {
     
     render() {
         return (
-            <div className="about-container">
-                <h1>About</h1>
+            <div className="about-wrapper">
+                <h1 className="me-header">Me Stuff</h1>
+                <div className="me-wrapper">
+
+                </div>
             </div>
         );
     }

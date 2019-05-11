@@ -69,10 +69,13 @@ button:hover {
 		margin: 0 auto;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 		position: relative;
+		&.landing {
+			align-items: center;
+		}
 		@include for-desktop {
-			width: 50%;
+			width: 70%;
 		}
 	}
 	.toggleDark {

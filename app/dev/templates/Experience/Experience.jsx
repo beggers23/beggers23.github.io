@@ -27,10 +27,13 @@ class Experience extends Component {
     render() {
         const { experience } = this.state;
         return (
-            <div className="experience-wrapper">
-                {experience.map((job) => {
-                    return <Job info={job} />
-                })}
+            <div className="exp-wrapper">
+                <h1 className="exp-header">Work Stuff</h1>
+                <div className="jobs-wrapper">
+                    {experience.map((job) => {
+                        return <Job info={job} />
+                    })}
+                </div>
             </div>
         )
     }

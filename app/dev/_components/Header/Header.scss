@@ -12,6 +12,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
     #hamburger {
         position: absolute;
         top: 10px;
@@ -35,7 +36,6 @@
                 height: 5px;
                 width: 100%;
                 background: $main-grey;
-                // transition: transform .2s ease-in-out;
                 &.top {
                     top: 25%;
                 }
@@ -74,13 +74,19 @@
                 font-size: 2rem;
             }
         }
+        &:hover {
+            a {
+                h1 {
+                    color: $red;
+                }
+            }
+        }
     }
     .links-wrapper {
         width: 100%;
         .header-nav, .header-social {
             width: 100%;
             display: flex;
-            // justify-content: space-around;
             align-items: center;
             .nav {
                 border: none;
@@ -110,7 +116,6 @@
             .header-nav, .header-social {
                 width: 50%;
                 display: flex;
-                // justify-content: space-around;
                 align-items: center;
                 .nav {
                     border: none;

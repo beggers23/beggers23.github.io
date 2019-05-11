@@ -24,11 +24,10 @@ class Header extends Component {
         });
     }
     render() {
-
-        const { active } = this.props;
+        const { active, page } = this.props;
         const { showMenu } = this.state;
         return (
-            <div className="header-container">
+            <div className={`header-container ${page}`}>
                 <div className="name">
                     <Link to="/">
                         <h1>Brendan Eggers</h1>

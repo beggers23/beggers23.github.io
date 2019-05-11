@@ -1,18 +1,18 @@
+@import '../../Styles/Config.scss';
+
 .nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 2rem 0;
-    // margin: 1rem 0;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid $main-black;
+    border-bottom: 1px solid $main-black;
     .underline {
         position: relative;
         text-align: center;
         &.inactive {
             a {
                 text-decoration: none;
-                // color: #0a0a0a;
             }
             &:after {
                 content: "";
@@ -21,7 +21,7 @@
                 height: 2px;
                 bottom: -5px;
                 left: -25%;
-                background-color: #444;
+                background-color: $main-grey;
                 visibility: hidden;
                 -webkit-transform: scaleX(0);
                 transform: scaleX(0);
@@ -45,7 +45,7 @@
                 height: 2px;
                 bottom: -5px;
                 left: -25%;
-                background-color: #444;
+                background-color: $red;
                 visibility: visible;
                 -webkit-transform: scaleX(1);
                 transform: scaleX(1);
@@ -59,8 +59,16 @@
 .dark {
     .nav {
         .underline {
-            &:after {
-                background-color: #fefefe;
+            &.inactive {
+                &:after {
+                    background-color: $main-white;
+                }
+            }
+            &.active {
+                &:after {
+                    
+                    background-color: $red;
+                }
             }
         }
     }

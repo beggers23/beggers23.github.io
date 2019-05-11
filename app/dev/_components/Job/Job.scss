@@ -1,10 +1,77 @@
-.job-wrapper {
-    margin: 1rem 0;
+@import '../../Styles/Config.scss';
 
+.job {
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    .job-header {
+        border-bottom: 1px solid $main-black;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        .text-holder {
+            .title {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: .5rem;
+            }
+            .location {
+                font-size: 1rem;
+                a {
+                    text-decoration: none;
+                    color: $red;
+                    &:hover {
+                        color: inherit;
+                    }
+                }
+            }
+            .dates {
+                font-size: .8rem;
+                color: #9a9a9a;
+                margin: .3rem 0;
+            }
+        }
+        .arrow-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            .arrow-icon {
+                font-size: 1.5rem;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            transition: transform .25s ease;
+            &.open {
+                transform: rotate(180deg);
+            }
+            &.closed {
+                transform: rotate(0deg);
+            }
+        }
+    }
     .job-details {
         margin: 1rem;
         p {
-            margin: .5rem 0;
+            margin: 1rem 0;
+        }
+        .tech {
+            color: #9a9a9a;
+        }
+
+        max-height: 300px;
+        overflow-y: hidden;
+        transition: all .5s ease-out;
+        &.hide {
+            max-height: 0;
+        }
+    }
+}
+
+.dark { 
+    .job {
+        .job-header {
+            border-bottom: 1px solid $main-white;
         }
     }
 }
