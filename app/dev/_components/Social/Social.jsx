@@ -9,12 +9,20 @@ function Social() {
     return (
         <div className="social">
             { (isMobile) &&
-                <Icon name="mobile-alt" base="fas" type="social" />
+                <a href="tel:9149073990">
+                    <Icon name="mobile-alt" base="fas" type="social" />
+                </a>
             }
-            <Icon name="linkedin" base="fab" type="social" />
+            <a href="https://www.linkedin.com/in/brendaneggers/" target="_blank">
+                <Icon link="" name="linkedin" base="fab" type="social" />
+            </a>
             <Icon name="file-pdf" base="fas" type="social" />
-            <Icon name="github" base="fab" type="social" />
-            <Icon name="envelope" base="fas" type="social" />
+            <a href="https://github.com/beggers23" target="_blank">
+                <Icon name="github" base="fab" type="social" />
+            </a>
+            <a href="mailto:brendan@eggers.dev">
+                <Icon name="envelope" base="fas" type="social" />
+            </a>
         </div>
     )
 };

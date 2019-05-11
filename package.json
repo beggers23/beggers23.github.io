@@ -73,6 +73,8 @@
     "install-webpack-dev-server": "npm install -g webpack webpack-dev-server",
     "prebuild": "gulp clean",
     "build": "webpack --config webpack.prod.js",
+    "prepublish": "npm run build",
+    "publish": "netlify deploy --prod",
     "start": "webpack-dev-server --open --config webpack.common.js"
   }
 }

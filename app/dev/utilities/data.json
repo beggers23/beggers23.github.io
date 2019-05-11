@@ -41,38 +41,38 @@
     "projects": [{
         "key": "BRI",
         "title": "Bizrate Offer Application",
-        "technology": "React",
-        "link": "",
-        "description": "Private and gated offer to sell magazines at a low price for the first term of issues. Payments can be processed through an internal API using Credit Cards or Paypal, powered by the Braintree API. I personally have spent the majority of my 2 year career at Synapse helping build, optimize, and maintain this application. It is the most stable and profitable part of the Synapse business. Survey Invitation Marketing Funnel .",
-        "image": "",
-        "trafficDetails": "",
-        "type": "private"
+        "technology": "React, Redux, REST APIs, Gulp, Webpack",
+        "link": "#/projects",
+        "image": "https://i.imgur.com/Ll8hKmp.jpg",
+        "trafficDetails": "Over 14 million sessions last year",
+        "type": "private",
+        "description": "Gated website that provides rewards for completing survey about purchasing experience on client sites. Unfortunately, I cannot show you the site due to the nature of the offer."
     }, {
         "key": "MFM",
         "title": "Mags for Miles",
         "technology": "React, Redux, REST APIs, Gulp, Webpack, Puppeteer",
         "link": "https://magsformiles.com",
-        "description": "This homepage directs users to the direct mail and email campaigns for a program where users can use excess airline or hotel miles/points to subscribe to magazines. Choose a client to see the offer built on a separate React Application that manages the ecommerce logic for the magazine offers.",
-        "trafficDetails": "",
-        "image": "",
-        "type": "public"
+        "trafficDetails": "Over 3 million sessions in the last year",
+        "image": "https://i.imgur.com/LyKToaS.jpg",
+        "type": "public",
+        "description": "Direct Mail and Email Campaigns for reward program members to redeem magazines for points."
     }, {
         "key": "MDC",
         "title": "Magazine Discount Center",
-        "technology": "Angular",
+        "technology": "Angular 2+, RxJS, Typescript, Git, Google Analytics",
         "link": "https://magazinediscountcenter.com",
-        "description": "E-Commerce platform for purchasing individual magazines. Built on Angular frontend and Java backend.",
-        "image": "",
-        "trafficDetails": "",
-        "type": "public"
+        "image": "https://i.imgur.com/vrB0T3c.jpg",
+        "trafficDetails": "Over 2 million sessions in the last year",
+        "type": "public",
+        "description": "E-Commerce platform for purchasing individual magazines. Built on Angular frontend and Java backend."
     }, {
         "key": "Watch",
         "title": "Stopwatch",
-        "technology": "Vue",
+        "technology": "Vue.js",
         "link": "https://beggers23.github.io/timer/",
-        "description": "Small personal project I made in 2016 to aid my swim coaching career.",
-        "image": "",
-        "trafficDetails": "none",
-        "type": "public"
+        "image": "https://i.imgur.com/4Dn8U2C.png",
+        "trafficDetails": "No traffic. Personal Site.",
+        "type": "public",
+        "description": "Small personal project I made in 2016 to aid my swim coaching career."
     }]
 }

@@ -36,8 +36,6 @@ class App extends Component {
 		this.state = {
 			val: false,
 		};
-
-		
 		this.toggleDarkMode = this.toggleDarkMode.bind(this);
 	}
 	
@@ -54,9 +52,6 @@ class App extends Component {
 		if(this.props.session.mode === 'dark') {
 			document.body.classList.add('dark');
 		}
-	}
-	componentDidUpdate() {
-		const { location, session, dispatch } = this.props;
 	}
 
 	toggleDarkMode() {

@@ -20,9 +20,18 @@
     }
 
     @keyframes wavy {
-        0% { border-radius: 50%; }
-        50% { border-radius: 0% } 
-        100% { border-radius: 50% }
+        0% { 
+            border-radius: 50%; 
+            border-color: $blue;
+        }
+        50% { 
+            border-radius: 0%; 
+            border-color: $orange;
+        } 
+        100% { 
+            border-radius: 50%; 
+            border-color: $blue;
+        }
     }
 }
 
@@ -31,6 +40,25 @@
         border: 1px solid $orange;
         i {
             color: $orange;
+        }
+        &:hover {
+            cursor: pointer;
+            animation: wavy-dark 2.5s linear infinite;
+        }
+    }
+
+    @keyframes wavy-dark {
+        0% { 
+            border-radius: 50%; 
+            border-color: $orange;
+        }
+        50% { 
+            border-radius: 0%; 
+            border-color: $blue;
+        } 
+        100% { 
+            border-radius: 50%; 
+            border-color: $orange;
         }
     }
 }
