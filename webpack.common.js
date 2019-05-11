@@ -7,7 +7,7 @@ module.exports = {
 		app: ['babel-polyfill', './app/dev/App.jsx'],
 	},
 	output: {
-		path: path.join(__dirname, './app/build'),
+		path: path.join(__dirname, './build'),
 		filename: '[name].bundle.[hash].js',
 	},
 	plugins: [

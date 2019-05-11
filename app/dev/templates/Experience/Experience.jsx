@@ -31,7 +31,7 @@ class Experience extends Component {
                 <h1 className="exp-header">Work Stuff</h1>
                 <div className="jobs-wrapper">
                     {experience.map((job) => {
-                        return <Job info={job} />
+                        return <Job key={job.key} info={job} />
                     })}
                 </div>
             </div>

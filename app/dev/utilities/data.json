@@ -3,14 +3,16 @@
 
     }],
     "experience": [{
+        "key": "Synapse",
         "title": "Front End Web Developer",
         "company": "Meredith Corp. | Synapse Group",
         "location": "Stamford, CT",
         "dates": "April 2017 - Present",
         "description": "Multi channel marketing company that provided me the opportunity to grow on a Kanban team of 5 developers. Worked on all channels of the business building websites to facilitate marketing offers for magazines, products, and services with clients such as Spotify, eBay, Overstock, Ticketmaster, Delta, United, JetBlue and others.",
-        "tech": "React, Redux, Webpack, Angular 4+, Git, Gulp, SCSS, AWS S3, PayPal, Spotify OAuth, REST API, SQL, EJS.",
+        "tech": "React, Redux, Webpack, Angular 4+, Git, Gulp, Google Analytics, SCSS, AWS S3, PayPal, Spotify OAuth, REST API, SQL, EJS.",
         "link": "https://www.meredith.com/"
     }, {
+        "key": "GA",
         "title": "Full Stack Web Developer",
         "company": "General Assembly",
         "location": "New York, NY",
@@ -19,6 +21,7 @@
         "tech": "HTML, CSS, Javascript, Git, jQuery, Angular 1, Node.js, Ruby on Rails, MongoDB, PostgreSQL, Heroku",
         "link": "https://generalassemb.ly/new-york-city/full-stack-web-development"
     }, {
+        "key": "Swimming",
         "title": "Head Swim Coach",
         "company": "Various Pools",
         "location": "New York and California",
@@ -26,6 +29,7 @@
         "description": "Coached various teams in New York, Ohio, and California. Ages of athletes ranged from 4 years to 24 years old with abilites from learning to swim, to competing at High School and NCAA Championship levels. During this time, I learned web development on my own using Free Code Camp and Code Academy while also managing a Wordpress site for one team I was coaching.",
         "tech": "HTML, Javascript, CSS, Wordpress, Leadership, Marketing, Organization"
     }, {
+        "key": "Witt",
         "title": "Student - Athlete",
         "company": "Wittenberg University",
         "location": "Springfield, OH",
@@ -35,6 +39,7 @@
         "link": "https://www.wittenberg.edu/"
     }],
     "projects": [{
+        "key": "BRI",
         "title": "Bizrate Offer Application",
         "technology": "React",
         "link": "",
@@ -43,6 +48,7 @@
         "trafficDetails": "",
         "type": "private"
     }, {
+        "key": "MFM",
         "title": "Mags for Miles",
         "technology": "React, Redux, REST APIs, Gulp, Webpack, Puppeteer",
         "link": "https://magsformiles.com",
@@ -51,6 +57,7 @@
         "image": "",
         "type": "public"
     }, {
+        "key": "MDC",
         "title": "Magazine Discount Center",
         "technology": "Angular",
         "link": "https://magazinediscountcenter.com",
@@ -59,6 +66,7 @@
         "trafficDetails": "",
         "type": "public"
     }, {
+        "key": "Watch",
         "title": "Stopwatch",
         "technology": "Vue",
         "link": "https://beggers23.github.io/timer/",
