@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
+import ReactGA from 'react-ga';
 
 import * as sessionActions from 'Actions/session.js';
 
 import Social from 'Components/Social/Social.jsx';
 import Nav from 'Components/Nav/Nav.jsx';
-import Header from 'Components/Header/Header.jsx';
 
 import './Index.scss';
 
 class Index extends Component {
     componentDidMount() {
         const { dispatch } = this.props;
-
+        ReactGA.ga('send', 'pageview', { page: 'landing', title: 'landing' });
         dispatch(sessionActions.updatePageVal('landing'));
     }
     render() {

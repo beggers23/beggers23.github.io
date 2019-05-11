@@ -4,6 +4,8 @@ import { isIE } from 'react-device-detect';
 import { withRouter } from 'react-router';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Provider, connect } from 'react-redux';
+import ReactGA from 'react-ga';
+
 import configureStore from 'Store/configureStore';
 // Actions
 import * as sessionActions from 'Actions/session';
@@ -13,8 +15,8 @@ import Index from 'Templates/Index/Index.jsx';
 import About from 'Templates/About/About.jsx';
 import Experience from 'Templates/Experience/Experience.jsx';
 import Projects from 'Templates/Projects/Projects.jsx';
-
 import Header from 'Components/Header/Header.jsx';
+
 import './styles/Common.scss';
 
 const store = configureStore();
@@ -32,6 +34,15 @@ function Root() {
 class App extends Component {
 	constructor(props) {
 		super(props);
+
+		ReactGA.initialize('UA-79969210-1', {
+			gaOptions: {
+				alwaysSendReferrer: true, // Process pages from current host (mybonuscenter.com) as referrals
+				allowAnchor: false, // Ignore utm parameters in URL
+			},
+		});
+
+		ReactGA.plugin.require('displayfeatures');
 
 		this.state = {
 			val: false,

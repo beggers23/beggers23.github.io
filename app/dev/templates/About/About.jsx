@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
-
+import ReactGA from 'react-ga';
 import * as sessionActions from 'Actions/session.js';
 
 const data = require('Utilities/data.json');
@@ -20,7 +20,7 @@ class About extends Component {
     }
     componentDidMount() {
         const { dispatch } = this.props;
-
+        ReactGA.ga('send', 'pageview', { page: 'about', title: 'about' });
         dispatch(sessionActions.updatePageVal('about'));
     }
     
