@@ -5,8 +5,8 @@
     justify-content: space-around;
     align-items: center;
     padding: 2rem 0;
-    border-top: 1px solid $main-black;
-    border-bottom: 1px solid $main-black;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
     .underline {
         position: relative;
         text-align: center;
@@ -21,7 +21,7 @@
                 height: 2px;
                 bottom: -5px;
                 left: -25%;
-                background-color: $main-grey;
+                background-color: $grey;
                 visibility: hidden;
                 -webkit-transform: scaleX(0);
                 transform: scaleX(0);
@@ -45,7 +45,7 @@
                 height: 2px;
                 bottom: -5px;
                 left: -25%;
-                background-color: $red;
+                background-color: $blue;
                 visibility: visible;
                 -webkit-transform: scaleX(1);
                 transform: scaleX(1);
@@ -61,13 +61,13 @@
         .underline {
             &.inactive {
                 &:after {
-                    background-color: $main-white;
+                    background-color: $white;
                 }
             }
             &.active {
                 &:after {
                     
-                    background-color: $red;
+                    background-color: $orange;
                 }
             }
         }

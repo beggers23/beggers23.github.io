@@ -19,20 +19,20 @@ html, body, #root {
 
 body {
 	transition: background .5s ease;
-	background: $main-white;
+	background: $white;
 	h1, h2, h3, h4, h5, p, button, a:link, a:visited, a:hover, div, span, header {
 		transition: background .5s ease, color .5s ease, border-color .5s ease;
-		color: $main-black;
-		border-color: $main-black;
-		background: $main-white;
+		color: $black;
+		border-color: $black;
+		background: $white;
 	}
 
 	&.dark {
-		background: $main-black;
+		background: $black;
 		h1, h2, h3, h4, h5, p, button, a:link, a:visited, a:hover, div, span, header  {
-			color: $main-white;
-			border-color: $main-white;
-			background: $main-black;
+			color: $white;
+			border-color: $white;
+			background: $black;
 		}
 	}
 }
