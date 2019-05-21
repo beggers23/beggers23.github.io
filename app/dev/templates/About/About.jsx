@@ -13,6 +13,7 @@ import './About.scss';
 class About extends Component {
     constructor(props) {
         super(props);
+        
 
         this.state = {
             details: data.about,
