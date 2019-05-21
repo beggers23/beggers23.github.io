@@ -60,6 +60,7 @@ class App extends Component {
 		} else {
 			history.push(`/${session.page}`);
 		}
+		
 
 		if(this.props.session.mode === 'dark') {
 			document.body.classList.add('dark');
