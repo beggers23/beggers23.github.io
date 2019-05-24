@@ -14,7 +14,7 @@ class Project extends Component {
 
 	toggleOverlay() {
 		const { overlay } = this.state;
-		const { info } = this.state;
+		const { info } = this.props;
 		
 		ReactGA.event({
 			category: 'Click',
