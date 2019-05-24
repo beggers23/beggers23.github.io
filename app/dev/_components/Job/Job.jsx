@@ -18,11 +18,12 @@ class Job extends Component {
 
 	toggleShow() {
 		const { show } = this.state;
-
+		const { info } = this.props;
+		
 		ReactGA.event({
 			category: 'Click',
 			action: 'Job Details',
-			label: `Turning ${show ? 'Off' : 'On'}`
+			label: `${show ? 'Hiding' : 'Showing'} ${info.title}`
 		});
 
 		this.setState({
