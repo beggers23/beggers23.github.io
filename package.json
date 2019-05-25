@@ -27,7 +27,6 @@
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "scriptjs": "^2.5.8",
-    "webpack": "^4.29.6",
     "webpack-browser-plugin": "^1.0.20",
     "webpack-merge": "^4.2.1",
     "whatwg-fetch": "^2.0.3"
@@ -67,7 +66,8 @@
     "react-hot-loader": "^4.0.0",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
-    "webpack-cli": "^3.2.3"
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
   },
   "scripts": {
     "install": "npm run install-webpack-dev-server",
