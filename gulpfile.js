@@ -4,12 +4,42 @@ const awspublish = require('gulp-awspublish');
 const rename = require('gulp-rename');
 const clc = require('cli-color');
 const path = require('path');
+const bump = require('gulp-bump');
+const git = require('gulp-git');
+const prompt = require('gulp-prompt');
+const { exec } = require('child_process');
+const gulpif = require('gulp-if');
+const packageJson = require('./package.json');
 
+const AWS_SECRET = require('../_config/portfolio.json');
+const PATH = '/';
+const S3 = awspublish.create(AWS_SECRET);
+const APP = path.join(__dirname, './app/build/*');
+const gitPath = path.join(__dirname, '.');
 
-const PATH = 'eggers.dev';
+gulp.task('bump', () => {
+	gulp.src('./package.json')
+		.pipe(gulpif(!process.env.BUMP,
+			prompt.prompt({
+				type: 'checkbox',
+				name: 'bump',
+				message: 'What type of bump would you like to do?\n',
+				choices: ['none', 'patch', 'minor', 'major'],
+			}, (res) => {
+				const val = res.bump[0];
+				if (val === 'none') {
+					return;
+				}
 
-// const S3 = awspublish.create(AWS_SECRET);
-const APP = path.join(__dirname, './build/*');
+				return (
+					gulp.src('./package.json')
+						.pipe(bump({ type: val }))
+						.pipe(gulp.dest('./'))
+				);
+			}),
+			bump({ type: process.env.BUMP })))
+		.pipe(gulpif((typeof (process.env.BUMP) === 'string'), gulp.dest('./')));
+});
 
 gulp.task('publish', () => {
 	return (
@@ -32,6 +62,40 @@ gulp.task('publish', () => {
 				console.log(clc.red(`Published to: ${PATH}`));
 			})
 	);
+});
+
+gulp.task('git', () => {
+	git.status({ args: '--porcelain' }, (err, stdout) => {
+		if (err === null && stdout !== '') {
+			git.revParse({ args: '--abbrev-ref HEAD' }, (branchErr, branch) => {
+				if (branchErr) throw branchErr;
+
+				gulp.src(gitPath)
+					.pipe(git.add())
+					.pipe(
+						gulpif(!process.env.COMMIT,
+							prompt.prompt({
+								type: 'input',
+								name: 'message',
+								message: 'Please input a commit message\n',
+							}, (res) => {
+								const commitMessage = (res.message === '') ? 'CAUGHT YOU TRYNA LEAVE' : res.message;
+								gulp.src(gitPath)
+									.pipe(git.commit(`[${branch}] v${packageJson.version}: ${commitMessage}`));
+							}),
+							git.commit(`[${branch}] v${packageJson.version}: ${process.env.COMMIT}`)),
+					)
+					.on('end', () => {
+						git.push('origin', (pushErr) => {
+							if (pushErr) throw pushErr;
+							else console.log('Pushed Successfully');
+						});
+					});
+			});
+		} else {
+			console.log('Nothing to commit');
+		}
+	});
 });
 
 
