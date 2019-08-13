@@ -36,7 +36,7 @@ class Job extends Component {
 		const { show } = this.state;
 		return (
 			<div className="job">
-				<div className="job-header">
+				<div className="job-header" onClick={this.toggleShow}>
 					<div className="text-holder">
 						<h1 className="title">{info.title}</h1>
 						<p className="location">
@@ -52,7 +52,6 @@ class Job extends Component {
 					</div>
 					<div 
 						className={`arrow-wrapper ${show ? 'open' : 'closed'}`}
-						onClick={this.toggleShow}
 					>
 						<Icon type="arrow" base="fas" name="chevron-down" />
 					</div>
