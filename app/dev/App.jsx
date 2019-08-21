@@ -44,16 +44,21 @@ class App extends Component {
 		});
 
 		ReactGA.plugin.require('displayfeatures');
-
-		this.state = {
-			val: false,
-		};
-		this.toggleDarkMode = this.toggleDarkMode.bind(this);
 	}
 	
 	componentDidMount() {
-		const { session , location, history} = this.props;
+		const { session , dispatch, history} = this.props;
 		window.scrollTo(0, 0);
+
+		const currentTime = new Date().getTime();
+
+		if (session.timeout === 0) {
+			dispatch(sessionActions.updateTimeout(currentTime));
+		} else {
+			if (session.timeOut > (currentTime - (30 * 60000))) {
+				dispatch(sessionActions.updatePageVal('landing'));
+			}
+		}
 
 		if(session.page === 'landing') {
 			history.push('/');
@@ -67,7 +72,7 @@ class App extends Component {
 		}
 	}
 
-	toggleDarkMode() {
+	toggleDarkMode = () => {
 		const { dispatch, session } = this.props;
 		const darkModeOn = (session.mode === 'dark');
 

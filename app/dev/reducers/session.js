@@ -1,12 +1,14 @@
 import {
 	UPDATE_PAGE_VAL,
 	UPDATE_COLOR_SCHEME,
+	UPDATE_TIMEOUT,
 } from 'Actions/session.js';
 
 const initialState = {
 	newSession: true,
 	page: 'landing',
-	mode: '',
+	mode: 'dark',
+	timeout: 0,
 }
 
 const sessionReducer = (state, action) => {
@@ -21,6 +23,12 @@ const sessionReducer = (state, action) => {
 			return {
 				...state,
 				mode: action.mode,
+			}
+		}
+		case UPDATE_TIMEOUT: {
+			return {
+				...state,
+				timeout: action.time,
 			}
 		}
 		default:
