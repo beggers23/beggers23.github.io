@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { isIE } from 'react-device-detect';
 import { withRouter } from 'react-router';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Provider, connect } from 'react-redux';
 import ReactGA from 'react-ga';
 
@@ -25,9 +25,9 @@ const store = configureStore();
 function Root() {
 	return (
 		<Provider store={store}>
-			<HashRouter>
+			<BrowserRouter>
 				<AppRouter />	
-			</HashRouter>
+			</BrowserRouter>
 		</Provider>
 	);
 }
