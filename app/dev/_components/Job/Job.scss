@@ -1,6 +1,7 @@
 @import "../../Styles/Config.scss";
 
 .job {
+    cursor: pointer;
     margin-bottom: 2rem;
     line-height: 1.2;
     .job-header {
@@ -34,9 +35,6 @@
             background: transparent;
             .arrow-icon {
                 font-size: 1.5rem;
-                &:hover {
-                    cursor: pointer;
-                }
             }
             transition: transform .25s ease;
             &.open {
