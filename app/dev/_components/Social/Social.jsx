@@ -16,9 +16,6 @@ function Social() {
             <a href="https://www.linkedin.com/in/brendaneggers/" target="_blank" rel="noopener noreferrer">
                 <Icon name="linkedin" base="fab" type="social" />
             </a>
-            <a href="/resume/BrendanEggersResume.pdf" target="_blank" rel="noopener noreferrer">
-                <Icon name="file-pdf" base="fas" type="social" />
-            </a>
             <a href="https://github.com/beggers23" target="_blank" rel="noopener noreferrer">
                 <Icon name="github" base="fab" type="social" />
             </a>
