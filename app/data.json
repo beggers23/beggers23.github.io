@@ -1,0 +1,167 @@
+{
+  "about": [
+    {
+      "headline": "Work Ethic",
+      "images": [
+        {
+          "base": "fab",
+          "name": "react",
+          "desc": "Ability to manage multiple responsibilities simultaneously"
+        },
+        {
+          "base": "fas",
+          "name": "code-branch",
+          "desc": "A team player and leader demonstrating a high level of accuracy and thoroughness"
+        },
+        {
+          "base": "fas",
+          "name": "coffee",
+          "desc": "Fast learner that effectively resolves issues and consistently exceeds established goals"
+        }
+      ]
+    },
+    {
+      "headline": "Personal Life",
+      "images": [
+        {
+          "base": "fab",
+          "name": "untappd",
+          "desc": "Craft beer enthusiast. Always trying to find the next best brew"
+        },
+        {
+          "base": "fas",
+          "name": "golf-ball",
+          "desc": "Continuously active playing Softball and Golf but attending gym classes for Boxing and Cycling regularly"
+        },
+        {
+          "base": "fas",
+          "name": "kiwi-bird",
+          "desc": "Travel junkie amped for the next big adventure. Recently returned from a two week trip to New Zealand"
+        }
+      ]
+    },
+    {
+      "headline": "Entertainment Interests",
+      "images": [
+        {
+          "base": "fas",
+          "name": "basketball-ball",
+          "desc": "Huge Knicks and NBA fan. Moderator of /r/nyknicks. Attends the NBA Draft annually"
+        },
+        {
+          "base": "fas",
+          "name": "swimmer",
+          "desc": "Former NCAA Division III Swimmer. A professional coach for almost ten years"
+        },
+        {
+          "base": "fas",
+          "name": "hat-wizard",
+          "desc": "Super nerdy as well. Avid GoT, Star Wars, MCU fan. In my first DnD campaign with my Magic buddies"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "key": "OpenSlate",
+      "title": "Frontend Engineer",
+      "company": "OpenSlate",
+      "location": "New York, NY",
+      "dates": "December 2019 - Present",
+      "description": "B2B AdTech company building solutions to help interact with hundreds of millions of Youtube and Facebook videos. Rewrote legacy code to React monorepo and full test suite for beta application.",
+      "tech": "React, Redux, React Testing Library, Git, Github, Material UI, Docker, Monorepo structure",
+      "link": "https://openslate.com/"
+    },
+    {
+      "key": "Synapse",
+      "title": "Frontend Engineer",
+      "company": "Meredith Corp. | Synapse Group",
+      "location": "Stamford, CT",
+      "dates": "April 2017 - December 2019",
+      "description": "A multichannel marketing company that provided me the opportunity to grow on a Kanban team of 5 developers. Worked on all channels of the business building websites to facilitate marketing offers for magazines, products, and services with clients such as Spotify, eBay, Overstock, Ticketmaster, Delta, United, JetBlue, and others.",
+      "tech": "React, Redux, Webpack, Angular 4+, Git, Gulp, Google Analytics, SCSS, AWS S3, PayPal, Spotify OAuth, REST API, SQL, EJS.",
+      "link": "https://synapsegroupinc.com/"
+    },
+    {
+      "key": "GA",
+      "title": "Full Stack Web Developer",
+      "company": "General Assembly",
+      "location": "New York, NY",
+      "dates": "March 2016 - June 2016",
+      "description": "9 am to 5 pm boot camp (that often went until 9 pm) that taught fundamentals of full stack development. This course gave me a solid foundation from where my skills grew exponentially. Through coding homework and weekly assignments, I was challenged to learn every second.",
+      "tech": "HTML, CSS, Javascript, Git, jQuery, Angular 1, Node.js, Ruby on Rails, MongoDB, PostgreSQL, Heroku",
+      "link": "https://generalassemb.ly/new-york-city/full-stack-web-development"
+    },
+    {
+      "key": "Swimming",
+      "title": "Head Swim Coach",
+      "company": "Various Pools",
+      "location": "New York and California",
+      "dates": "August 2014 - April 2017",
+      "description": "I coached various teams in New York, Ohio, and California. Ages of athletes ranged from 4 years to 24 years old with abilities from learning to swim, to competing at High School and NCAA Championship levels. During this time, I learned web development on my own using Free Code Camp and Code Academy while also managing a Wordpress site for one team I was coaching.",
+      "tech": "HTML, Javascript, CSS, Wordpress, Leadership, Marketing, Organization"
+    },
+    {
+      "key": "Witt",
+      "title": "Student - Athlete",
+      "company": "Wittenberg University",
+      "location": "Springfield, OH",
+      "dates": "August 2009 - May 2014",
+      "description": "Four-year varsity swimmer. Studied to become a swim coach. I took four semesters worth of Computer Science courses. Didn't realize it was a path I wanted to pursue until later.",
+      "tech": "HTML, CSS, Javascript, Java, Python, Communications, Pottery, Swimming",
+      "link": "https://www.wittenberg.edu/"
+    }
+  ],
+  "projects": [
+    {
+      "key": "BRI",
+      "title": "Bizrate Offer Application",
+      "technology": "React, Redux, REST APIs, Gulp, Webpack",
+      "link": "",
+      "image": "https://i.imgur.com/Ll8hKmp.jpg",
+      "trafficDetails": "Over 14 million sessions last year",
+      "type": "private",
+      "description": "Gated website that provides rewards for completing a survey about purchasing experience on client sites. Unfortunately, I cannot show you the site due to the nature of the offer"
+    },
+    {
+      "key": "MFM",
+      "title": "Mags for Miles",
+      "technology": "React, Redux, REST APIs, Gulp, Webpack, Puppeteer",
+      "link": "https://magsformiles.com",
+      "trafficDetails": "Over 3 million sessions in the last year",
+      "image": "https://i.imgur.com/LyKToaS.jpg",
+      "type": "public",
+      "description": "Direct Mail and Email Campaigns for reward program members to redeem magazines for points"
+    },
+    {
+      "key": "MDC",
+      "title": "Magazine Discount Center",
+      "technology": "Angular 2+, RxJS, Typescript, Git, Google Analytics",
+      "link": "https://magazinediscountcenter.com",
+      "image": "https://i.imgur.com/vrB0T3c.jpg",
+      "trafficDetails": "Over 2 million sessions in the last year",
+      "type": "public",
+      "description": "E-Commerce platform for purchasing individual magazines"
+    },
+    {
+      "key": "Watch",
+      "title": "Stopwatch",
+      "technology": "Vue.js",
+      "link": "https://beggers23.github.io/timer/",
+      "image": "https://i.imgur.com/4Dn8U2C.png",
+      "trafficDetails": "No one goes here",
+      "type": "public",
+      "description": "A small personal project I made in 2016 to aid my swim coaching career"
+    },
+    {
+      "key": "Snake",
+      "title": "Snake",
+      "technology": "jQuery, CSS",
+      "link": "http://beggers23.github.io/SnakeGame/",
+      "image": "https://raw.githubusercontent.com/beggers23/SnakeGame/master/Images/StartScreen.png",
+      "trafficDetails": "No one goes here",
+      "type": "public",
+      "description": "The first project I ever made. Snake using only jQuery and CSS"
+    }
+  ]
+}
