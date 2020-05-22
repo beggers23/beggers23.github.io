@@ -1,17 +1,12 @@
 import { useState } from "react";
 import { createMuiTheme } from "@material-ui/core/styles";
-
-const defaultFontFamily = ["Maven Pro", "sans-serif"].join(",");
+import Theme from "../utils/Theme";
 
 const useDarkMode = () => {
   const [isDarkMode, setDarkMode] = useState(true);
-
   const toggleDarkMode = () => setDarkMode(!isDarkMode);
-
   const muiTheme = createMuiTheme({
-    typography: {
-      fontFamily: defaultFontFamily,
-    },
+    ...Theme,
     palette: {
       type: isDarkMode ? "dark" : "light",
     },

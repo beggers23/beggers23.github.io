@@ -1,30 +1,37 @@
 import React from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
-import { CssBaseline, Typography, Box } from "@material-ui/core";
+import { CssBaseline, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { BrowserRouter as Router } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
 import DarkModeToggle from "./components/DarkModeToggle/DarkModeToggle";
 import useDarkMode from "./hooks/useDarkMode";
-const API = window.API_URL;
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   applicationContainer: {
     position: "relative",
+    padding: theme.spacing(2),
+    minHeight: "100vh",
+    maxHeight: "100vh",
+    minWidth: "100vw",
+    maxWidth: "100vw",
+    overflow: "hidden",
   },
-});
+}));
 
 const Root = () => {
   const classes = useStyles();
   const { muiTheme, isDarkMode, toggleDarkMode } = useDarkMode();
+
   return (
     <ThemeProvider theme={muiTheme}>
       <CssBaseline />
       <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-      <Router>
-        <Box className={classes.applicationContainer}>
-          <Typography variant="h4">Hello World</Typography>
-        </Box>
-      </Router>
+      <Box className={classes.applicationContainer}>
+        <Router>
+          <AppRoutes />
+        </Router>
+      </Box>
     </ThemeProvider>
   );
 };
