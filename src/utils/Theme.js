@@ -5,6 +5,7 @@ const Theme = createMuiTheme({
   typography: {
     fontFamily: defaultFontFamily,
   },
+  overrides: {},
 });
 
 export default Theme;

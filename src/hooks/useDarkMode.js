@@ -1,16 +1,23 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { useMediaQuery } from "@material-ui/core";
 import { createMuiTheme } from "@material-ui/core/styles";
 import Theme from "../utils/Theme";
 
 const useDarkMode = () => {
-  const [isDarkMode, setDarkMode] = useState(true);
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const [isDarkMode, setDarkMode] = useState(prefersDarkMode);
   const toggleDarkMode = () => setDarkMode(!isDarkMode);
-  const muiTheme = createMuiTheme({
-    ...Theme,
-    palette: {
-      type: isDarkMode ? "dark" : "light",
-    },
-  });
+
+  const muiTheme = useMemo(
+    () =>
+      createMuiTheme({
+        ...Theme,
+        palette: {
+          type: prefersDarkMode ? "dark" : "light",
+        },
+      }),
+    [prefersDarkMode]
+  );
 
   return {
     muiTheme,

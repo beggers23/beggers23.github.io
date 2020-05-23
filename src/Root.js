@@ -1,3 +1,4 @@
+import "./utils/wdyr";
 import React from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { CssBaseline, Box } from "@material-ui/core";
@@ -15,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: "100vh",
     minWidth: "100vw",
     maxWidth: "100vw",
-    overflow: "hidden",
+    overflowX: "hidden",
+    overflowY: "auto",
   },
 }));
 
