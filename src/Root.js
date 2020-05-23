@@ -4,13 +4,13 @@ import { CssBaseline, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { BrowserRouter as Router } from "react-router-dom";
 import AppRoutes from "./routes/AppRoutes";
+import AppNav from "./components/AppNav/AppNav";
 import DarkModeToggle from "./components/DarkModeToggle/DarkModeToggle";
 import useDarkMode from "./hooks/useDarkMode";
 
 const useStyles = makeStyles((theme) => ({
   applicationContainer: {
     position: "relative",
-    padding: theme.spacing(2),
     minHeight: "100vh",
     maxHeight: "100vh",
     minWidth: "100vw",
@@ -29,6 +29,7 @@ const Root = () => {
       <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       <Box className={classes.applicationContainer}>
         <Router>
+          <AppNav />
           <AppRoutes />
         </Router>
       </Box>
