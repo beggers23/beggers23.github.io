@@ -5,7 +5,7 @@ import Theme from "../utils/Theme";
 
 const useDarkMode = () => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  const [isDarkMode, setDarkMode] = useState(prefersDarkMode);
+  const [isDarkMode, setDarkMode] = useState(!prefersDarkMode);
   const toggleDarkMode = () => setDarkMode(!isDarkMode);
 
   const muiTheme = useMemo(
@@ -13,10 +13,10 @@ const useDarkMode = () => {
       createMuiTheme({
         ...Theme,
         palette: {
-          type: prefersDarkMode ? "dark" : "light",
+          type: isDarkMode ? "dark" : "light",
         },
       }),
-    [prefersDarkMode]
+    [isDarkMode]
   );
 
   return {

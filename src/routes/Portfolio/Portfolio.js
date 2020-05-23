@@ -1,5 +1,5 @@
 import React from "react";
-import PortfolioItem from "../../components/PortfolioItem/PortfolioItem";
+import { getPortfolioItem } from "../../components/PortfolioItems/PortfolioItems";
 import { Container, Grid } from "@material-ui/core";
 import useFetch from "../../hooks/useFetch";
 const Portfolio = () => {
@@ -7,9 +7,11 @@ const Portfolio = () => {
     "portfolio"
   );
 
+  const PortfolioItem = getPortfolioItem("desktop");
+
   return (
     <Container>
-      <Grid container spacing={1} justify="space-around">
+      <Grid container spacing={2} justify="space-around">
         {data.map((project) => (
           <PortfolioItem key={project._id} data={project} />
         ))}
