@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     bottom: theme.spacing(2),
     left: theme.spacing(2),
-    zIndex: 10000000000000,
+    zIndex: theme.zIndex.tooltip,
   },
 }));
 
