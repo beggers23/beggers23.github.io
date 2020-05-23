@@ -5,8 +5,12 @@ import {
   Grid,
   CardHeader,
   CardMedia,
+  CardActions,
+  Button,
+  IconButton,
   Typography,
 } from "@material-ui/core";
+import { Language, GitHub, Fullscreen } from "@material-ui/icons";
 import BrowserButtons from "../../BrowserButtons/BrowserButtons";
 
 const useStyles = makeStyles((theme) => ({
@@ -35,16 +39,24 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
   },
   cardMedia: {
-    height: 200,
+    height: 225,
     margin: `0 auto`,
-    background: "center top",
+    backgroundPosition: "center top",
     backgroundSize: "cover",
-    background: theme.palette.grey[700],
+  },
+  cardButton: {
+    marginLeft: theme.spacing(1),
+  },
+  rightButton: {
+    marginLeft: "auto",
+    padding: theme.spacing(1),
   },
 }));
 const DesktopPortfolioItem = ({ data }) => {
   const classes = useStyles();
-  const { desktop_image, title, year_built } = data;
+  const { desktop_image, title, year_built, github, web_url } = data;
+
+  const handleOpenProject = () => console.log("big");
 
   return (
     <Grid item xs={12} sm={6} md={4}>
@@ -66,6 +78,39 @@ const DesktopPortfolioItem = ({ data }) => {
           title={title}
           image={desktop_image}
         />
+        <CardActions disableSpacing>
+          <Button
+            size="small"
+            variant="contained"
+            href={web_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.cardButton}
+            startIcon={<Language />}
+          >
+            Web
+          </Button>
+          {github.map((link) => (
+            <Button
+              size="small"
+              variant="contained"
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={classes.cardButton}
+              rightButton
+              startIcon={<GitHub />}
+            >
+              {link.stack_type.replace(/_/g, " ")}
+            </Button>
+          ))}
+          <IconButton
+            className={classes.rightButton}
+            onClick={handleOpenProject}
+          >
+            <Fullscreen />
+          </IconButton>
+        </CardActions>
       </Card>
     </Grid>
   );
