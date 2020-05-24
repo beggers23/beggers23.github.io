@@ -1,4 +1,3 @@
-import "./utils/wdyr";
 import React from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { CssBaseline, Box } from "@material-ui/core";
