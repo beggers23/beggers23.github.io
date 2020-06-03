@@ -53,7 +53,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const DesktopPortfolioItem = ({ data }) => {
-  const classes = useStyles();
+  const {
+    cardHeader,
+    cardMedia,
+    avatar,
+    action,
+    content,
+    subheader,
+    cardButton,
+    rightButton,
+  } = useStyles();
   const { desktop_image, title, year_built, github, web_url } = data;
 
   const handleOpenProject = () => console.log("big");
@@ -65,31 +74,29 @@ const DesktopPortfolioItem = ({ data }) => {
           avatar={<BrowserButtons />}
           action={<Typography variant="body2">{year_built}</Typography>}
           classes={{
-            avatar: classes.avatar,
-            action: classes.action,
-            content: classes.content,
-            subheader: classes.subheader,
+            avatar,
+            action,
+            content,
+            subheader,
           }}
-          className={classes.cardHeader}
+          className={cardHeader}
           subheader={title.toLowerCase()}
         />
-        <CardMedia
-          className={classes.cardMedia}
-          title={title}
-          image={desktop_image}
-        />
+        <CardMedia className={cardMedia} title={title} image={desktop_image} />
         <CardActions disableSpacing>
-          <Button
-            size="small"
-            variant="contained"
-            href={web_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={classes.cardButton}
-            startIcon={<Language />}
-          >
-            Web
-          </Button>
+          {web_url && (
+            <Button
+              size="small"
+              variant="contained"
+              href={web_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cardButton}
+              startIcon={<Language />}
+            >
+              Web
+            </Button>
+          )}
           {github.map((link) => (
             <Button
               size="small"
@@ -97,17 +104,14 @@ const DesktopPortfolioItem = ({ data }) => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={classes.cardButton}
+              className={cardButton}
               rightButton
               startIcon={<GitHub />}
             >
               {link.stack_type.replace(/_/g, " ")}
             </Button>
           ))}
-          <IconButton
-            className={classes.rightButton}
-            onClick={handleOpenProject}
-          >
+          <IconButton className={rightButton} onClick={handleOpenProject}>
             <Fullscreen />
           </IconButton>
         </CardActions>
