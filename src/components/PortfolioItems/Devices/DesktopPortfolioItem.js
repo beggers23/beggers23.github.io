@@ -97,15 +97,15 @@ const DesktopPortfolioItem = ({ data }) => {
               Web
             </Button>
           )}
-          {github.map((link) => (
+          {github.map((link, index) => (
             <Button
+              key={`${index}_link`}
               size="small"
               variant="contained"
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
               className={cardButton}
-              rightButton
               startIcon={<GitHub />}
             >
               {link.stack_type.replace(/_/g, " ")}

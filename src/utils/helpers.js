@@ -16,3 +16,22 @@ export const generateFiltersArray = (aggregates, filterOriginKey) => {
     ),
   ];
 };
+
+export const getFiltersArray = (keyType) => {
+  switch (keyType) {
+    case "primary_technologies":
+      return [
+        "React",
+        "Redux",
+        "React Testing Library",
+        "Node",
+        "Mongoose",
+        "Material UI",
+        "Puppeteer",
+        "Angular",
+        "Vue",
+      ];
+    default:
+      break;
+  }
+};

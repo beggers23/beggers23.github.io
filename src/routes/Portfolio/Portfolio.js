@@ -6,7 +6,7 @@ import Filters from "../../components/Filters/Filters";
 import { Container, Grid } from "@material-ui/core";
 import useFetch from "../../hooks/useFetch";
 
-import { generateFiltersArray } from "../../utils/helpers";
+import { getFiltersArray } from "../../utils/helpers";
 
 const Portfolio = () => {
   const [selectedFilter, setSelectedFilter] = useState(null);
@@ -17,7 +17,7 @@ const Portfolio = () => {
   const [filteredProjects, setFilteredProjects] = useState(data);
 
   const PortfolioItem = getPortfolioItem("desktop");
-  const filterArray = generateFiltersArray(data, "primary_technologies");
+  const filterArray = getFiltersArray("primary_technologies");
 
   useEffect(() => {
     setFilteredProjects(

@@ -7,22 +7,22 @@ const useStyles = makeStyles((theme) => ({
     margin: `${theme.spacing(2)}px 0`,
     padding: theme.spacing(1),
   },
+  filter: {
+    margin: theme.spacing(1),
+    minWidth: 60,
+  },
 }));
 
 const Filters = ({ filters = [], selectedFilter, setSelectedFilter }) => {
-  const classes = useStyles();
+  const { filterContainer, filter } = useStyles();
   return (
-    <Grid
-      className={classes.filterContainer}
-      container
-      spacing={1}
-      justify="space-between"
-    >
+    <Grid className={filterContainer} container spacing={1} justify="center">
       <SingleFilter
         key="clear"
         value="All Projects"
         selected={!selectedFilter}
         handleClick={() => setSelectedFilter(null)}
+        className={filter}
       />
       {filters.map((f) => (
         <SingleFilter
@@ -30,19 +30,21 @@ const Filters = ({ filters = [], selectedFilter, setSelectedFilter }) => {
           value={f}
           selected={f === selectedFilter}
           handleClick={() => setSelectedFilter(f)}
+          className={filter}
         />
       ))}
     </Grid>
   );
 };
 
-const SingleFilter = ({ value, selected, handleClick }) => {
+const SingleFilter = ({ value, selected, handleClick, ...rest }) => {
   return (
     <Chip
       clickable
       label={value}
       color={selected ? "primary" : "default"}
       onClick={handleClick}
+      {...rest}
     />
   );
 };
